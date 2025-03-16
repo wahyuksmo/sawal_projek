@@ -21,6 +21,7 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -38,13 +39,15 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('/'); // Arahkan ke /
+            
+            return redirect('/'); // Arahkan ke /
         }
 
         return back()->withErrors(['email' => 'Email atau password salah.']);
