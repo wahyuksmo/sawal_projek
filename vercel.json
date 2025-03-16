@@ -30,6 +30,6 @@
         "DB_PORT": "6543",
         "DB_DATABASE": "postgress",
         "DB_USERNAME": "postgres.ibaiotastifjetqiusgo",
-        "DB_PASSWORD": "@Admin1234!"
+        "DB_PASSWORD": "Admin1234!"
     }
 }
